@@ -1,0 +1,12 @@
+body {
+	zoom: 2;
+	display: flex
+}
+
+div {
+	padding: 10px;
+}
+
+p {
+	text-indent: 1.5em;
+}
