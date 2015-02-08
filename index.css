@@ -13,7 +13,16 @@ div {
 	text-align: justify;
 }
 
-@media only screen and (max-width: 750px) {
+a {
+	white-space: nowrap;
+}
+
+h1 {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+@media only screen and (max-device-width: 750px) {
 	body {
 		display: block;
 	}
@@ -23,17 +32,18 @@ div {
 	}
 }
 
-h1 {
-	margin-bottom: 1em;
-	text-align: center;
+@media only screen and (max-device-width: 400px) {
+	div, h1 {
+		text-align: left;
+	}
+
+	a {
+		white-space: normal;
+	}
 }
 
 p {
 	text-indent: 1.5em;
-}
-
-a {
-	white-space: nowrap;
 }
 
 em {
