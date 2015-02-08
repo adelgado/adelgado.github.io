@@ -25,3 +25,8 @@ p {
 a {
 	white-space: nowrap;
 }
+
+em {
+	font-weight: bold;
+	font-style: normal;
+}
