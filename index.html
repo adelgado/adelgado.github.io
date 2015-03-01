@@ -8,37 +8,355 @@
 	<link rel="stylesheet" type="text/css" href="index.css" media="screen">
 </head>
 <body>
-	<div lang="en">
-		<h1 id="en">Hello!</h1>
-		<p>
-			Welcome to my corner of the Internet. I’m Alessandro and I’m a Brazilian software developer. I’m into traveling, food, languages and technology.
-		</p>
-		<p>
-			I was born in <a href="https://en.wikipedia.org/wiki/Rio_de_Janeiro">Rio de Janeiro</a>, and I’ve spent part of my life in <a href="https://en.wikipedia.org/wiki/France">France</a>. Two years ago I’ve moved to the awesome city of <a href="https://en.wikipedia.org/wiki/Berlin">Berlin</a>!
-		</p>
-		<p>
-			Currently I have the pleasure of working at <a href="http://moviepilot.com/">Moviepilot</a>, where I spend most of my time writing <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="https://www.ruby-lang.org/en/">Ruby</a>.
-		</p>
-		<p>
-			Around August or September this year I plan to go back to Brazil, so I’m looking for a job where I’d be able to work remotely. <em>If you’re looking for remote developers, check out <a href="https://www.linkedin.com/in/alessandrodelgado">my LinkedIn profile</a></em>.
-		</p>
-	</div>
+	<section class="intro">
+		<div lang="en">
+			<h1 id="en">Hello!</h1>
+			<p>
+				Welcome to my corner of the Internet. I’m Alessandro and I’m a software developer. I’m into traveling, food, languages and technology.
+			</p>
+			<p>
+				I was born in <a href="https://en.wikipedia.org/wiki/Rio_de_Janeiro">Rio de Janeiro</a>, and I’ve spent part of my life in <a href="https://en.wikipedia.org/wiki/France">France</a>. Two years ago I’ve decided to move to the awesome city of <a href="https://en.wikipedia.org/wiki/Berlin">Berlin</a>!
+			</p>
+			<p>
+				Currently, I have the pleasure of working at <a href="http://moviepilot.com/">Moviepilot</a>, where I spend most of my time writing <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="https://www.ruby-lang.org/en/">Ruby</a>.
+			</p>
+			<p>
+				Around August or September this year I plan to go back to Brazil, so I’m looking for a job where I’d be able to work remotely. <em>If you are looking for remote developers, drop me an e-mail at <a href="mailto:adelgado1313@gmaill.com">adelgado1313@gmail.com</a></em>.
+			</p>
 
-	<div lang="pt-br">
-		<h1 id="pt">Olá!</h1>
-		<p>
-			Bem-vindo(a) ao meu cantinho da Internet. Eu sou o Alessandro e eu sou um brasileiro desenvolvedor de software. Eu gosto de viajar, gastronomia, línguas, e tecnologia.
-		</p>
-		<p>
-			Eu nasci no <a href="http://pt.wikipedia.org/wiki/Rio_de_Janeiro_(cidade)">Rio de Janeiro</a>, e passei parte da vida na <a href="http://pt.wikipedia.org/wiki/Fran%C3%A7a">França</a>. Dois anos atrás resolvi me mudar pra fanstástica cidade de <a href="http://pt.wikipedia.org/wiki/Berlim">Berlim</a>!
-		</p>
-		<p>
-			No momento eu tenho o prazer de trabalhar na <a href="http://moviepilot.com">Moviepilot</a>, aonde eu passo a maior parte do tempo escrevendo <a href="http://coffeescript.org/">CoffeeScript</a> e <a href="https://www.ruby-lang.org/pt/">Ruby</a>.
-		</p>
-		<p>
-			Em Agosto ou Setembro deste ano eu pretendo voltar pro Brasil e por isso estou procurando um novo emprego no qual eu possa trabalhar remotamente. <em>Se você está procurando desenvolvedores remotos, dê uma olhada no <a href="https://www.linkedin.com/in/alessandrodelgado">meu perfil do LinkedIn</a></em>.
-		</p>
-	</div>
+			<a class="call-to-action" href="#what-i-ve-been-doing">Check out what I’ve been doing</a>
+		</div>
+
+		<div lang="pt-br">
+			<h1 id="pt">Olá!</h1>
+			<p>
+				Bem-vindo(a) ao meu cantinho da Internet. Eu sou o Alessandro e eu sou desenvolvedor de software. Eu gosto de viajar, gastronomia, línguas, e tecnologia. 
+			</p>
+			<p>
+				Eu nasci no <a href="http://pt.wikipedia.org/wiki/Rio_de_Janeiro_(cidade)">Rio de Janeiro</a>, e passei parte da vida na <a href="http://pt.wikipedia.org/wiki/Fran%C3%A7a">França</a>. Dois anos atrás resolvi me mudar pra fanstástica cidade de <a href="http://pt.wikipedia.org/wiki/Berlim">Berlim</a>!
+			</p>
+			<p>
+				No momento tenho o prazer de trabalhar na <a href="http://moviepilot.com">Moviepilot</a>, aonde eu passo a maior parte do tempo escrevendo <a href="http://coffeescript.org/">CoffeeScript</a> e <a href="https://www.ruby-lang.org/pt/">Ruby</a>.
+			</p>
+			<p>
+				Em Agosto ou Setembro deste ano eu pretendo voltar pro Brasil e por isso estou procurando um emprego no qual eu possa trabalhar remotamente.
+				<em>Se você está procurando desenvolvedores remotos, entre em contato comigo via <a href="mailto:adelgado1313@gmail.com">adelgado1313@gmail.com</a></em>.
+			</p>
+		</div>
+	</section>
+
+	<section class="experience">
+		<input type="checkbox" id="display-portuguese">
+
+		<div lang="en">
+			<label for="display-portuguese">Português</label>
+
+			<h2 id="what-i-ve-been-doing">What I’ve been doing</h2>
+
+			<ul>
+				<li class="position">
+					<header>
+						<h3>Moviepilot</h3>
+						<div class="info">
+							<div class="date">July 2013 – Current</div>
+							<div class="location">Berlin and Los Angeles</div>
+						</div>
+					</header>
+					<div class="description">
+						Largest multi-channel publisher on Facebook, fastest growing movie website in the world.
+					</div>
+					<ul>
+						<li>
+							Part of the team (~6) responsible for evolving the main website and all its
+							associated areas and features. We wrote CoffeeScript and used Node.js with
+							Express as the backend middleware, and (mostly) Backbone.js on the frontend.
+						</li>
+						<li>
+							Part of the team (~4) responsible for implementing a modern in-browser
+							authoring tool, whose middleware's a Rails application and the frontend a Backbone.js application in CoffeeScript.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>WeGreen</h3>
+						<div class="info">
+							<div class="date">February 2013 – June 2013</div>
+							<div class="location">Berlin</div>
+						</div>
+					</header>
+					<div class="description">
+						Sustainability-focused German search engine and marketplace.
+					</div>
+					<ul>
+						<li>
+							Developing along with a team (4) the mobile version of a search engine for
+							ecological products and services, using the Symfony framework for PHP and
+							the Knockout MVVM framework for JavaScript.
+						</li>
+						<li>
+							Packaging the mobile website as a native iOS application through the Cordova/Adobe PhoneGap framework, maintaining a body of Makefiles, Bash and Lua scripts for that task.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>Pontomobi</h3>
+						<div class="info">
+							<div class="date">June 2012 – December 2012</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						Significant player in LatAm mobile marketing and advertising.
+					</div>
+					<ul>
+						<li>
+							Architecting and implementing an ad-server in Node.js with Express, using
+							Angular in the administrative interface.
+						</li>
+						<li>
+							Supporting the legacy ad-server and analytics engine, in PHP.
+						</li>
+						<li>
+							Iterative evolution of the legacy ad-server's libraries in Java and Objective-C.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>MundiPagg</h3>
+						<div class="info">
+							<div class="date">February 2012 – May 2012</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						E-payments industry startup, founded by former Braspag executives, investment from Arpex Capital.
+					</div>
+					<ul>
+						<li>
+							Part of the team (5) responsible for implementing the transactional platform, using a Service-Oriented Architecture and exposing SOAP web-services implemented in C#.NET.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>Braspag</h3>
+						<div class="info">
+							<div class="date">August 2010 – July 2011</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						Largest Payment Gateway in Latin America, with a market share of over 65% in Brazil at the time.
+					</div>
+					<ul>
+						<li>
+							Part of the team (4) responsible for architecting and implementing from scratch the new main transactional platform in C#.NET.
+						</li>
+						<li>
+							Development of client modules for interaction with diverse banking systems in C#.NET and PHP.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>Fábrica Digital</h3>
+						<div class="info">
+							<div class="date">March 2008 – February 2009</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						Small pioneer company in the Brazilian CMS arena, dealing with over 400 customers, corporations, governmental agencies.
+					</div>
+					<ul>
+						<li>Conception of web-applications in Lua using the Kepler framework.</li>
+						<li>Building plugins for the Publique! CMS in Lua.</li>
+						<li>Building plugins for the Drupal CMS in PHP.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<footer>
+				<div class="languages">
+					<h2>Languages I speak</h2>
+					<p>
+						I grew up speaking <em>French</em> and <em>Portuguese</em>. I can speak <em>English</em> fluently, I’m able to speak pretty good <em>Spanish</em> and I’m starting to learn <em>German</em>.
+					</p>
+				</div>
+				<div class="institutions">
+					<h2>Places I went to</h2>
+					<p>
+						I graduated from middle and high school at <em>Escola Parque</em>, and I’ve studied Computer Science at <em>PUC-Rio</em> for 2 years.
+					</p>
+				</div>
+			</footer>
+		</div>
+
+		<div lang="pt-br">
+			<label for="display-portuguese">English</label>
+
+			<h2>O que eu tenho feito nos últimos tempos</h2>
+
+			<ul>
+				<li class="position">
+					<header>
+						<h3>Moviepilot</h3>
+						<div class="info">
+							<div class="date">Julho 2013 – Atual</div>
+							<div class="location">Berlim e Los Angeles</div>
+						</div>
+					</header>
+					<div class="description">
+						Maior <i>publisher</i> multi-canal do Facebook; página de filmes que mais cresce no mundo.
+					</div>
+					<ul>
+						<li>
+							Parte do time (~6) responsável por evoluir o <i>website</i> principal e todas
+							suas áreas associadas e funcionalidades. Escrevemos em CoffeeScript
+							e usamos Node.js com Express como <i>middleware</i> de <i>backend</i>, e (principalmente) Backcbone.js no <i>frontend</i>.
+						</li>
+						<li>
+							Parte do time (~4) responsável por implementar um processador de texto moderno
+							dentro do browser, cujo middleware de aplicação era em Rails e o frontend era uma SPA em CoffeeScript usando Backbone.js.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>WeGreen</h3>
+						<div class="info">
+							<div class="date">Fevereiro 2013 – Junho 2013</div>
+							<div class="location">Berlim</div>
+						</div>
+					</header>
+					<div class="description">
+						Motor de busca e <i>marketplace</i> alemão focado em sustentabilidade.
+					</div>
+					<ul>
+						<li>
+							Desenvolvimento da versão móvel de um motor de busca para serviços e
+							produtos ecologicamente conscientes, como parte integrante de de um time (4).
+							Utilizamos o <i>framework</i> PHP Symfony, com o <i>frontend</i> feito
+							com ajuda do <i>framework</i> MVVM Knockout.
+						</li>
+						<li>
+							Empacotamento do <i>website</i> móvel como uma aplicação iOS nativa através
+							do uso do <i>framework</i> Cordova/Adobe PhoneGap, mantendo um corpo de Makefiles e <i>scripts</i> Bash e Lua para realizar esta tarefa.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>Pontomobi</h3>
+						<div class="info">
+							<div class="date">June 2012 – December 2012</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						<i>Player</i> significativo nas áreas de <i>marketing</i> móvel e <i>advertising</i>
+					</div>
+					<ul>
+						<li>
+							Arquitetura e implementação de um servidor de anúncios em Node.js com Express, utilizando Angular na concepção da interface administrativa.
+						</li>
+						<li>
+							Suporte ao <i>ad-server</i> e <i>engine</i> de <i>analytics</i> de legado, em PHP.
+						</li>
+						<li>
+							Evolução iterativa das bibliotecas do <i>ad-server</i> de legado, em Java e Objective-C.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>MundiPagg</h3>
+						<div class="info">
+							<div class="date">Fevereiro 2012 – Maio 2012</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						<i>Startup</i> na indústria de <i>e-payments</i>, fundada por executivos da Braspag, com investimento da Arpex Capital.
+					</div>
+					<ul>
+						<li>
+							Parte do time (5) responsável por implementar a plataforma transacional,
+							utilizando uma Arquitetura Orientada a Serviços (SOA) e expondo <i>webservices</i>
+							SOAP implementados em C#.NET.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>Braspag</h3>
+						<div class="info">
+							<div class="date">Agosto 2010 – Julho 2011</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						Maior <i>Gateway</i> de Pagamentos da América Latina, com <i>market share</i> de mais de 65% no Brasil à época.
+					</div>
+					<ul>
+						<li>
+							Parte do time (4) responsável por arquitetar e implementar a nova plataforma transacional em C#.NET.
+						</li>
+						<li>
+							Desenvolvimento de módulos clientes para interação com sistemas bancários diversos, em C#.NET e PHP.
+						</li>
+					</ul>
+				</li>
+
+				<li class="position">
+					<header>
+						<h3>Fábrica Digital</h3>
+						<div class="info">
+							<div class="date">Março 2008 – Fevereiro 2009</div>
+							<div class="location">Rio de Janeiro</div>
+						</div>
+					</header>
+					<div class="description">
+						Empresa pioneira no mercado de Sistemas de Gerência de Conteúdo (CMS), com
+						mais de 400 clientes desde pequenas organições a corporações multinacionais.
+					</div>
+					<ul>
+						<li>Concepção de aplicações web em Lua utilizando o <i>framework</i> Kepler.</li>
+						<li>Construção de plugins para o CMS Publique! em Lua.</li>
+						<li>Construção de plugins para o CMS Drupal em PHP.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<footer>
+				<div class="languages">
+					<h2>Idiomas</h2>
+					<p>
+						Eu cresci falando <em>Francês</em> e <em>Português</em>. Eu falo <em>Inglês</em>
+						fluentemente, falo <em>Espanhol</em> bem, e comecei a aprender <em>Alemão</em>
+						recentemente.
+					</p>
+				</div>
+				<div class="institutions">
+					<h2>Instituições</h2>
+					<p>
+						Eu me formei do Ensino Fundamental e Médio na <em>Esola Parque</em>, e eu estudei dois anos de Ciências da Computação na <em>PUC-Rio</em>.
+					</p>
+				</div>
+			</footer>
+	</section>
 
 	<script src="analytics.js"></script>
 </body>

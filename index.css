@@ -1,20 +1,31 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Gilda+Display);
 
 body {
-	display: flex;
 	font-family: 'Open Sans', sans-serif;
 	max-width: 940px;
 	margin-left: auto;
 	margin-right: auto;
-}
 
-div {
-	padding: 1em 2em;
-	text-align: justify;
+	/* OMG that hurts my eyes */
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility; /* optional: for older browsers */
+	-webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
+	font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
+	-moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern"; /* Firefox 14+ */
+	font-feature-settings: "kern"; /* standard */
+	font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
 }
 
 a {
 	white-space: nowrap;
+}
+
+h1,
+h2 {
+	font-family: 'Gilda Display', serif;
+	font-size: 32px;
 }
 
 h1 {
@@ -22,31 +33,197 @@ h1 {
 	text-align: center;
 }
 
+p {
+	text-indent: 1.5em;
+
+}
+
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+section,
+footer {
+	padding: 1em 2em;
+}
+
+.intro {
+	display: flex;
+}
+
+.intro div {
+	text-align: justify;
+}
+
+.call-to-action {
+	display: none;
+}
+
+.intro [lang="en"]    { padding-right: 2em; }
+.intro [lang="pt-br"] { padding-left:  2em; }
+
+.experience {
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.experience div > ul {
+	list-style: none;
+	text-align: justify;
+	margin-top: 40px;
+}
+
+.position {
+	margin-bottom: 40px;
+}
+
+.position header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.position h3 {
+	align-self: flex-start;
+	margin: 0
+}
+
+.position .description {
+	margin-left: 1em;
+	margin-bottom: 1em;
+	font-size: 13px;
+}
+
+.position ul {
+	margin-left: 1em;
+	margin-right: 3em;
+	list-style: square;
+}
+
+.position .info {
+	align-self: center;
+	text-align: right;
+	font-size: 14px;
+	color: grey;
+}
+
+footer {
+	display: flex;
+}
+
+footer p {
+	text-align: justify;
+}
+
+footer .languages    { padding-right: 2em; }
+footer .institutions { padding-left:  2em; }
+
+
+/*
+	Nifty checkbox for the language selection in pure CSS
+*/
+
+input { display: none; }
+
+input:not(:checked) ~ [lang="pt-br"] { display: none;  }
+input:not(:checked) ~ [lang="en"]    { display: block; }
+
+input:checked       ~ [lang="pt-br"] { display: block; }
+input:checked       ~ [lang="en"]    { display: none;  }
+
+[lang] label {
+	float: right;
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+[lang] label::selection {
+	background-color: transparent;
+	color: blue;
+}
+
+
+/* 
+	Adjust stuff so that it looks nice on small screens
+*/
+
 @media only screen and (max-width: 750px) {
-	body {
+	.intro,
+	.call-to-action,
+	footer {
 		display: block;
 	}
 
-	div {
-		padding: 1em 15%;
+	.call-to-action {
+		text-align: center;
+		margin-top: 2em;
+		font-size: large;
+	}
+
+	.intro [lang],
+	.experience,
+	footer {
+		padding: 1em 4em;
+	}
+
+	.experience .date,
+	.experience .location {
+		float: right;
+	}
+	.experience .location::after {
+		content: '|';
+		margin-left: .5em;
+		margin-right: .5em;
+	}
+
+	.experience .description {
+		margin-top: 1em;
+	}
+
+	footer .languages,
+	footer .institutions {
+		padding: 0;
 	}
 }
 
-@media only screen and (max-width: 400px) {
-	div, h1 {
+@media only screen and (max-width: 600px) {
+	h1,
+	.intro div {
 		text-align: left;
 	}
+
+
+
+	.intro [lang],
+	.experience,
+	footer {
+		padding: 1em 2em;
+	}
+
+	.info { display: none;}
 
 	a {
 		white-space: normal;
 	}
 }
 
-p {
-	text-indent: 1.5em;
-}
+@media only screen and (max-width: 500px) {
+	body {
+		margin: 1em;
+	}
 
-em {
-	font-weight: bold;
-	font-style: normal;
+	.intro,
+	.intro [lang],
+	.experience,
+	.experience div > ul,
+	footer p {
+		padding: 0;
+		text-align: left;
+	}
+
+	.experience div > ul {
+		padding-left: .5em;
+	}
 }
