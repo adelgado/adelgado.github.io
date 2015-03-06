@@ -18,8 +18,18 @@ body {
 	font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
 }
 
-a {
+a,
+a:hover,
+a:visited,
+[lang] label {
 	white-space: nowrap;
+	color: #06C;
+	text-decoration: none;
+}
+
+a:hover,
+[lang] label:hover {
+	text-decoration: underline;
 }
 
 h1,
@@ -134,8 +144,6 @@ input:checked       ~ [lang="en"]    { display: none;  }
 
 [lang] label {
 	float: right;
-	color: blue;
-	text-decoration: underline;
 	cursor: pointer;
 }
 
