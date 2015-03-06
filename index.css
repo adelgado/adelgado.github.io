@@ -194,19 +194,15 @@ input:checked       ~ [lang="en"]    { display: none;  }
 		text-align: left;
 	}
 
-
-
 	.intro [lang],
 	.experience,
 	footer {
 		padding: 1em 2em;
 	}
 
-	.info { display: none;}
+	.info { display: none; }
 
-	a {
-		white-space: normal;
-	}
+	a { white-space: normal; }
 }
 
 @media only screen and (max-width: 500px) {
