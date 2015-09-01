@@ -3,8 +3,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	max-width: 940px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 
 	/* OMG that hurts my eyes */
 	-webkit-font-smoothing: antialiased;
@@ -19,32 +18,32 @@ body {
 	-webkit-font-kerning: normal;
 	   -moz-font-kerning: normal;
 	        font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 100vh;
 }
 
 a,
 a:hover,
-a:visited,
-[lang] label {
+a:visited {
 	white-space: nowrap;
 	color: #06C;
 	text-decoration: none;
 }
 
-a:hover,
-[lang] label:hover {
+a:hover {
 	color: #30a7fc;
 }
 
 h1 {
 	margin-bottom: 1em;
 	text-align: center;
-}
-
-h1,
-h2 {
 	font-family: 'Gilda Display', serif;
 	font-size: 32px;
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.25)
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
 }
 
 p {
@@ -56,12 +55,8 @@ em {
 	font-style: normal;
 }
 
-section {
-	padding: 1em 2em;
-}
-
 .intro {
-	display: -webkit-box;
+	padding: 1em 2em;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -71,172 +66,27 @@ section {
 	text-align: justify;
 }
 
-.call-to-action {
-	display: none;
-}
-
 .intro [lang="en"]    { padding-right: 2em; }
 .intro [lang="pt-br"] { padding-left:  2em; }
 
-.experience {
-	margin-top: 40px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.experience div > ul {
-	list-style: none;
-	text-align: justify;
-	margin-top: 40px;
-}
-
-.position {
-	margin-bottom: 40px;
-}
-
-.position header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-
-	-webkit-justify-content: space-between;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-}
-
-.position h3 {
-	display: block;
-	margin: 0;
-	font-size: 20px;
-}
-
-.position .info {
-	text-align: right;
-	font-size: 14px;
-	color: grey;
-}
-
-.position p {
-	margin-left: 2em;
-	margin-right: 1em;
-}
-
-footer {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-footer p {
-	text-align: justify;
-}
-
-footer .languages    { padding-right: 2em; }
-footer .institutions { padding-left:  2em; }
-
-
-/*
-	Nifty checkbox for the language selection in pure CSS
-*/
-
-input { display: none; }
-
-input:not(:checked) ~ [lang="pt-br"] { display: none;  }
-input:not(:checked) ~ [lang="en"]    { display: block; }
-
-input:checked       ~ [lang="pt-br"] { display: block; }
-input:checked       ~ [lang="en"]    { display: none;  }
-
-[lang] label {
-	float: right;
-	cursor: pointer;
-}
-
-[lang] label::-moz-selection,
-[lang] label::selection {
-	background-color: transparent;
-	color: blue;
-}
-
-
-/*
-	Adjust stuff so that it looks nice on small screens
-*/
-
-@media only screen and (max-width: 750px) {
-	.intro,
-	.call-to-action,
-	footer {
-		display: block;
+@media screen and (max-width: 950px) {
+	.intro {
+		flex-direction: column;
+		align-self: center;
 	}
 
-	.call-to-action {
-		text-align: center;
-		margin-top: 2em;
-		font-size: large;
-	}
-
-	.intro [lang],
-	.experience,
-	footer {
-		padding: 1em 4em;
-	}
-
-	.experience .date,
-	.experience .location {
-		float: right;
-	}
-	.experience .location::after {
-		content: '|';
-		margin-left: .5em;
-		margin-right: .5em;
-	}
-
-	.experience .description {
-		margin-top: 1em;
-	}
-
-	footer .languages,
-	footer .institutions {
+	.intro [lang] {
+		width: 380px;
 		padding: 0;
 	}
 }
 
-@media only screen and (max-width: 600px) {
-	h1,
+@media screen and (max-width: 450px) {
+	.intro [lang] {
+		width: 100%;
+	}
+
 	.intro div {
 		text-align: left;
-	}
-
-	.intro [lang],
-	.experience,
-	footer {
-		padding: 1em 2em;
-	}
-
-	.info { display: none; }
-
-	a { white-space: normal; }
-}
-
-@media only screen and (max-width: 500px) {
-	body {
-		margin: 1em;
-	}
-
-	.intro,
-	.intro [lang],
-	.experience,
-	.experience div > ul,
-	footer p {
-		padding: 0;
-		text-align: left;
-	}
-
-	.experience div > ul {
-		padding-left: .5em;
 	}
 }
