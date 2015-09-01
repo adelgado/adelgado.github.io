@@ -2,28 +2,18 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	max-width: 940px;
-	margin: 0 auto;
+	font-variant-ligatures: common-ligatures;
+	/* http://caniuse.com/#feat=font-feature */
+	-webkit-font-feature-settings:"kern", "liga", "dlig", "hlig";
+	font-feature-settings: "kern", "liga", "dlig", "hlig";
 
-	/* OMG that hurts my eyes */
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility; /* optional: for older browsers */
-	-webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
-	-moz-font-variant-ligatures: common-ligatures;
-	     font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
-	-moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
-	-webkit-font-feature-settings: "kern";
-	-moz-font-feature-settings: "kern"; /* Firefox 14+ */
-	font-feature-settings: "kern"; /* standard */
-	-webkit-font-kerning: normal;
-	   -moz-font-kerning: normal;
-	        font-kerning: normal; /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+	max-width: 940px;
+	height: 100vh;
+	margin: 0 auto;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	height: 100vh;
 }
 
 a,
@@ -57,6 +47,7 @@ em {
 
 .intro {
 	padding: 1em 2em;
+	/* http://caniuse.com/#search=webkit-flex */
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
