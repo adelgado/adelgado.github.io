@@ -14,7 +14,8 @@ body {
 	flex-direction: column;
 }
 
-header {
+header,
+footer {
 	font-family: Helvetica, Arial, sans-serif;
 	color: white;
 	background-color: #222;
@@ -44,6 +45,17 @@ main {
 	flex-direction: column;
 	max-width: 30rem;
 	margin: auto;
+}
+
+footer ul {
+	display: flex;
+	list-style: none;
+	justify-content: flex-end;
+	flex-grow: 2;
+}
+
+footer ul li {
+	margin-left: 1rem;
 }
 
 h1 {
