@@ -51,6 +51,17 @@ aside {
 	max-width: 30rem;
 }
 
+@media screen and (max-device-width: 750px) {
+	main {
+		flex-direction: column;
+	}
+
+	article,
+	aside {
+		max-width: none;
+	}
+}
+
 aside li {
 	margin-bottom: 1rem;
 }
