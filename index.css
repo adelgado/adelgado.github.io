@@ -1,90 +1,47 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans|Gilda+Display);
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-variant-ligatures: common-ligatures;
-	/* http://caniuse.com/#feat=font-feature */
-	-webkit-font-feature-settings: "kern", "liga", "dlig", "hlig";
-	font-feature-settings: "kern", "liga", "dlig", "hlig";
+   font-family: "Open Sans", sans-serif;
+   font-variant-ligatures: common-ligatures;
+   /* http://caniuse.com/#feat=font-feature */
+   -webkit-font-feature-settings: "kern", "liga", "dlig", "hlig";
+   font-feature-settings: "kern", "liga", "dlig", "hlig";
 
-	min-height: 100vh;
-	margin: 0 auto;
+   min-height: 100vh;
+   margin: 0 auto;
 
-	display: flex;
-	flex-direction: column;
-}
-
-header,
-footer {
-	font-family: Helvetica, Arial, sans-serif;
-	color: white;
-	background-color: #222;
-	display: flex;
-	align-items: center;
-	padding: 1rem;
-}
-
-header h1 {
-	margin: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
 a,
 a:hover,
 a:visited {
-	white-space: nowrap;
-	color: #06C;
-	text-decoration: none;
+   white-space: nowrap;
+   color: #06c;
+   text-decoration: none;
 }
 
 a:hover {
-	color: #30a7fc;
-}
-
-main {
-	display: flex;
-	margin: auto;
-	padding: 3rem;
-}
-
-article,
-aside {
-	max-width: 30rem;
-}
-
-@media screen and (max-device-width: 750px) {
-	main {
-		flex-direction: column;
-	}
-
-	article,
-	aside {
-		max-width: none;
-	}
-}
-
-aside li {
-	margin-bottom: 1rem;
-}
-
-footer ul {
-	display: flex;
-	list-style: none;
-	justify-content: flex-end;
-	flex-grow: 2;
-}
-
-footer ul li {
-	margin-left: 1rem;
+   color: #30a7fc;
 }
 
 h1 {
-	margin-bottom: 1em;
-	text-align: center;
-	font-family: 'Gilda Display', serif;
-	font-size: 32px;
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+   text-align: center;
+   font-family: "Gilda Display", serif;
+   font-size: 32px;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
-p {
-	text-indent: 1.5em;
+ul li {
+   line-height: 2;
 }
